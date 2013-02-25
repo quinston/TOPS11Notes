@@ -1,5 +1,7 @@
-\documentclass{article}
+\documentclass[letterpaper]{article}
+\usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
+\usepackage{amsmath, amssymb}
 \begin{document}
 \title{Kinematics}
 \author{Mr. H. van Bemmel}
@@ -44,5 +46,76 @@ An example:
         \item Polar, in which we have an angle $\theta$ and a radius (magnitude) $r$.
         \item Cartesian or rectangular, in which we have an ordered pair $(x, y)$.
     \end{enumerate}
+
+For polar form, {\bf all} $\theta's$ are referenced from the $+x$ axis.
+    (Counterclockwise).
+As long as $\theta$ is referenced from the $+x$ axis, your $x, y$ components
+will always be correct. In polar form, the magnitude is {\bf always} positive.
+
+\subsubsection{Other angle issues}
+\paragraph{Bearings}
+Some of our kinematics work will involve directions. A compass direction is
+called a bearing ($\gamma$) and is measured clockwise from $+y$.
+However, components of such vectors require a $\theta$ reference counterclockwise
+from $+x$.
+Conversion:
+\[
+    (\theta = 450 - \gamma) \in [0, 360)
+\]
+\paragraph{Types}
+\begin{itemize}
+    \item Absolute\hfill\\Bearing is an angle clockwise from $+y \in [0, 360)$
+    \\ Very typical for professional navigation.
+    \item Relative\hfill\\Suppose $\gamma = 128^{\circ}$
     
+    We can also produce a bearing like this:
+    \begin{enumerate}
+        \item Choose the cardinal direction (N, E, S, W) to which this $\gamma$
+        most closest points.
+        \[
+            S\hfill 42^{\circ} E
+        \]
+        \item Correct is so many degrees on either side of the chosen cardinal.
+        For N or S, it is E or W, and vice-versa.
+    \end{enumerate}
+\paragraph{Two basic rules}
+\begin{enumerate}
+    \item If correction is $45^\circ$ use NE, NW, etc
+    \item If correction is $<45^\circ$, use trig and common sense.
+\end{enumerate}
+\end{itemize}
+\section{$\mathbb{R}^3$ - Spatial Motion}
+Can use $(x, y, z)$, or $(r, \theta, \phi)$, spherical, or $(r, \theta, h)$, cylindrical.\\
+$\theta \in [0, 360) \textrm{ or } [-180, 180)$\\
+$\phi \in [-90, 90]$\\
+
+\subsection{$\mathbb{R}^3$}
+Above $\mathbb{R}^3$ only n-tuples are defined. We cannot visualize them and
+must trust the theory. 
+
+\subsection{Lines}
+
+For $y = mx$, which passes through the origin, $\theta =\textrm{ constant}$.
+
+For $y = mx + b$, $r = \frac{b}{\sin{\theta} - m\cos{\theta}}$ (derivation will
+be left as an exercise to the reader.)
+
+\section{Position Vectors($\vec{r}$)}
+To analyze motion, it is sessential to locate objects in a frame. A position
+vector begins at the origin and ends at the object. If the object moves
+ the $\vec{r}$ instantaneously moves to follow it.
+
+\section{Displacement($\vec{s}$)}
+If an object moves, there is a straight vector that points from the start to the
+finish. This is called {\bf displacement}. It is the net change of position.
+
+In addition or subtraction, vector variable algebra is identical to $\mathbb{R}$.
+
+\begin{itemize}
+    \item Commutivity. $a + b = b + a$
+    \item Associativity. $(a + b) + c = a + (b + c)$
+\end{itemize}
+
+If we move to point A, then to point B, we can simply move to point B.
+
 \end{document}
