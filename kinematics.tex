@@ -3,7 +3,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath, amssymb}
 \begin{document}
-\title{Kinematics}
+\title{1D Kinematics}
 \author{Mr. H. van Bemmel}
 \date{February 19, 2013}
 \maketitle
@@ -22,7 +22,7 @@ The assembly of the fiducial point and these axes is called a {\bf Frame of Refe
 
 To locate an object in a frame requires a distance and a direction from the fiducial.
 
-\subsection{Vectors}
+\section{Vectors}
 Any variable which requires a magnitude and a direction to make sense is called a vector.
 Example:
 \begin {itemize}
@@ -38,7 +38,7 @@ A quantity that has only magnitude is called a scalar. For example:
 
 We will denote a vector $x$ with an arrow above the letter: $\vec{x}$.
 
-\subsubsection{Stating Vectors}
+\subsection{Stating Vectors}
 An example:
     Let us say we have a vector going on a 2D cartesian plane going from the origin
     to (3, 4). We have two basic coordinate systems to choose from:
@@ -84,7 +84,7 @@ Conversion:
     \item If correction is $<45^\circ$, use trig and common sense.
 \end{enumerate}
 \end{itemize}
-\section{$\mathbb{R}^3$ - Spatial Motion}
+\subsection{$\mathbb{R}^3$ - Spatial Motion}
 Can use $(x, y, z)$, or $(r, \theta, \phi)$, spherical, or $(r, \theta, h)$, cylindrical.\\
 $\theta \in [0, 360) \textrm{ or } [-180, 180)$\\
 $\phi \in [-90, 90]$\\
@@ -152,6 +152,9 @@ A rate is a comparison of a variable and time, typically standardized as
 \begin{table}[ht]\label{SiUnitsTable}
 \centering
 \caption{SI Base Units}
+
+
+
 \begin{tabular}{l| c r} 
     & mks & cgs\\ \hline
     Length & m & cm\\
@@ -200,4 +203,101 @@ If $\Delta{t} \rightarrow 0$ then another limit,
     \item Crackle
     \item Pop
 \end{enumerate}
+
+\section{Mathematical Relationships in Kinematics}
+
+The interrelations between kinematics variables are firstly derived
+from definitions and then subject to mathematical rigour. Recall:
+\[
+    a = \frac{\text{d}v}{\text{d}t}
+\]
+Hence,
+\[
+    \text{d}v = a\text{d}t
+\]
+\[
+    \int{\text{d}v} = \int{a\text{d}t}
+\]
+\[
+    v = at + c
+\]
+
+The $c$ represents $v(0)$. It is practise in physics to write $v(0) = v_0$
+seen as an intitial condition. We tend to write polynomials with their terms
+oriented in order of increasing exponents. 
+This is because it is typical of
+a Taylor series and they are used extensively to approximate more involved
+functions. Therefore, our equation becomes
+\begin{equation} \label{v}
+    v = v_0 + at
+\end{equation}
+
+Our second equation comes from another definition.
+\[
+    v = \frac{\text{d}s}{\text{d}t}
+\]
+\[
+    \text{d}s = v\text{d}t
+\]
+\[
+    \text{d}s = (v_0 + at)\text{d}t
+\]
+\[
+    = v_0\text{d}t + at\text{d}t
+\]
+
+We arrive at:
+\begin{equation} \label{s}
+    s = s_0 + v_0 t + \frac{1}{2}at^2
+\end{equation}
+\paragraph*{Some constraints:}
+\begin{enumerate}
+    \item $a$ is assumed constant over an interval.
+    \item Time intervals must be changed if:
+    \begin{itemize}
+        \item $\vec{a}$ changes
+        \item $\vec{v}$ changes sign
+        \item $\vec{v}$ changes arbitrarily (magic)
+    \end{itemize}
+    \item Question dictates it.
+\end{enumerate}
+\newpage
+In (\ref{v}), $t = \frac{v - v_0}{a}$ and substitute this into (\ref{s}).
+\[
+    s = s_0 + v_0 \left(\frac{v - v_0}{a}\right) + 
+    \frac{1}{2} a \left( \frac{v - v_0}{a}\right) ^ 2
+\]
+\[
+    \vdots
+\]
+\begin{equation} \label{eq3}
+    v^2 = v_0^2 + 2as
+\end{equation}
+\subsection{Reminder}
+\paragraph*{(\ref{eq3}) is only valid iff:}
+    \begin{itemize}
+        \item $v$ has a constant sign.
+        \item Single time interval.
+    \end{itemize}
+\subsection{Caution}
+$\vec{v}_{AVG}$ is defined as 
+\[
+\vec{v}_{AVG} = \frac{\sum{\vec{s}}}{\sum{t}}
+\]
+and
+\[
+    v_{AVG} = \frac{\sum{d}}{\sum{t}}
+\]
+But:
+\[
+    v_{AVG} \neq \frac{\sum{v_k}}{\sum{t}}
+\]
+\section{Graphing kinematics equations}
+An object starting from rest accelerates at a constant rate until
+the object has moved 4m. It then stops for 1s.
+It then goes at $-2\text{ms}^{-1}$ for 2s and finally $\vec{a}$ at 1ms$^{-2}$
+for 2.
+An exercise to the reader:
+Cretae a table.
+
 \end{document}
