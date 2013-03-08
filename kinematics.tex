@@ -3,7 +3,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath, amssymb}
 \begin{document}
-\title{1D Kinematics}
+\title{Kinematics}
 \author{Mr. H. van Bemmel}
 \date{February 19, 2013}
 \maketitle
@@ -299,5 +299,76 @@ It then goes at $-2\text{ms}^{-1}$ for 2s and finally $\vec{a}$ at 1ms$^{-2}$
 for 2s.
 An exercise to the reader:
 Create a table.
+
+\section{2D Motion}
+
+When we move to $\mathbb{R}^2$, we have additional types of motion.
+\begin{itemize}
+    \item curvilinear motion
+    \item rotational motion, which will be covered in grade 12
+\end{itemize}
+
+2D motion is represented using polar vectors or ordered pairs.
+The components of each axis must be kept separate from the other.
+Our calculations will be effected using components exclusively 
+(i.e. rectangular form). You are not permitted to use sine or cosine law.
+
+Many questions use bearings instead of $\theta$. All angles to be referenced
+from the $+x$ axis, counterclockwise.
+
+\paragraph{General algorithm for problems:}
+\begin{enumerate}
+    \item $\gamma \to \theta$ angles
+    \item components
+    \item set up system of equations
+    \item solve it
+    \item put answer in acceptable form.
+\end{enumerate}
+
+\section{Projectile Motion}
+To study the flight of a projectile that is launched with velocity 
+$\vec{v_0}$, but thereafter is affected only by gravity is called
+{\bf ballistics}. The solutions to the differential equations that describe
+such paths are known as {\bf ballistic trajectories}.
+
+Most of these require advanced forms of calculus and/or a computer to solve.
+We can generate a special case by making some rather bold assumptions.
+\begin{itemize}
+    \item No air
+    \item The earth is flat
+    \item Object must land at same elevation
+\end{itemize}
+\subsection{The Situation}
+Since $F_g$ is the only active force and $g$ is constant (i.e. the
+acceleration of gravity: $-9.8ms^-2$).
+
+Taking components:
+\[
+    v_x = v_0 \cos{\theta}, v_y = v_0 \sin{\theta}
+\]
+
+$g$ acts only on the $y$ so $v_x$ will be constant and $x$ motion shall
+continue at a constant rate until contact. The $y$ motion acts as a timer
+and controls the duration of the flight.
+\[
+    r = v_x t = (v_0 \cos{\theta})t
+\]
+\[
+    v_y = v_{0y} + a_y t
+\]
+Time to max height will be equal to the fall time. So compute the time to 
+max height and double it:
+\[
+    t = \frac{-v_0 \sin{\theta}}{g}
+\]
+
+\[
+    r = \frac{-v_0^2 \sin{2\theta}}{g}
+\]
+
+Unfortunately, many books take $g>0$ and produce
+\begin{equation} \label{RangeEqn}
+    r = \frac{v_0^2 \sin{2\theta}}{g}
+\end{equation}
 
 \end{document}
