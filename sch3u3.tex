@@ -10,7 +10,7 @@
 \usepackage{hyperref}
 \setmainfont{FreeSerif}
 
-\newcommand*{\el}{e$^{-}$}
+\newcommand*{\el}{e$^-$}
 
 \begin{document}
 \chapter{The History of the Discovery of the Atom}
@@ -371,13 +371,13 @@ The example is \ce{[FI_{4}]^{-}}.
 Flourine has an electronegativity of 4.1 which is greater than iodine's 2.2. So in the centre goes iodine.
 \item Count the total valence electrons. Add or subtract accordingly for charged compounds  \\
 Iodine has 7, and four flourines have 28. This compound is negatively-charged, so there is one extra electron.  \\
-A total of 7+28+1 = 36 e$^{-}$.
+A total of 7+28+1 = 36 \el.
 \item Connect everything with single bonds \\
 \chemfig{F-I(-[0]F)(-[2]F)(-[6]F)} \\
-Each single bond is 2 electrons. So now we have 36 e$^{-}$ - 4$\times$2 e$^{-}$ = 36 e$^{-}$ - 8 e$^{-}$ = 28 e$^{-}$.
+Each single bond is 2 electrons. So now we have 36 \el - 4$\times$2 \el = 36 \el - 8 \el = 28 \el.
 \item Fulfill the octet rule in the surrounding atoms \\
 \chemfig{\lewis{2:4:6:,F}-I(-[0]\lewis{0:2:6:,F})(-[2]\lewis{0:4:2:,F})(-[6]\lewis{0:4:6:,F})} \\
-Now we have 28 e$^{-}$ - 24 e$^{-}$ = 4 e$^{-}$.
+Now we have 28 \el - 24 \el = 4 \el.
 \item And we plunk the remainder onto the central atom. \\
 \chemfig{\lewis{2:4:6:,F}-\lewis{1:5:,I}(-[0]\lewis{0:2:6:,F})(-[2]\lewis{0:4:2:,F})(-[6]\lewis{0:4:6:,F})}
 \end{enumerate}
@@ -437,16 +437,16 @@ There are some twelve shapes, but the two you will need to know are these cubic 
 \item[Face-centred cubic] Point on the centre of every face \\
 There are 8 corner particles and 6 face particles. \\
 \begin{align*}
-8 corners + 6 faces &= 8(\frac{1}{8}) + 6(\frac{1}{2})
+\text{8 corners} + \text{6 faces} &= 8(\frac{1}{8}) + 6(\frac{1}{2})
 &= 1 + 3
-&= 4 particles
+&= \text{4 particles}
 \end{align*}
 \item[Body-centred cubic] Point in the centre of the cube \\
 There are 8 corner particles and 1 central particle. \\
 \begin{align*}
-8 corners + 1 centre &= 8(\frac{1}{8}) + 1(1)
+\text{8 corners} + \text{1 centre} &= 8(\frac{1}{8}) + 1(1)
 &= 1 + 1
-&= 2 particles
+&= \text{2 particles}
 \end{align*}
 \end{description}
 
@@ -455,13 +455,13 @@ Look at \href{http://bit.ly/101SXqL}{this} \\
 And then table salt is special. NaCl has alternating Na and Cl along every edge, through every face and corner. \\
 The corner and face particles are Cl.
 \begin{align*}
-8 corners + 6 faces &= 8(\frac{1}{8}) + 6(\frac{1}{2})
+\text{8 corners} + \text{6 faces} &= 8(\frac{1}{8}) + 6(\frac{1}{2})
 &= 1 + 3
 &= 4 Cl^{-}
 \end{align*}
 The edge and central particles are Na.
 \begin{align*}
-12 edges + 1 centre &= 12(\frac{1}{4}) + 1(1)
+\text{12 edges} + \text{1 centre} &= 12(\frac{1}{4}) + 1(1)
 &= 3 + 1
 &= 4 Na^{-}
 \end{align*}
@@ -475,5 +475,108 @@ To recap:
 \end{itemize}
 
 \chapter{VSEPR, shape, polarity}
-Just look at the \href{http://abelmoodle.abel.yorku.ca/moodle/mod/resource/view.php?id=78307}{slides}.
+\begin{description}
+\item[Valence shell electorn pair repulsion] electrons in the valence shell move as far as part as possible to minimize repulsion
+\item[electron domain] a region occupied to valence electorn pairs. Can be bonding or non-bonding
+\item[bonding domain] space occupied by shared electrons i.e. a bond, regardless of order
+\item[non-bonding domain] space occupied by lone pair
+\end{description}
+\section{Electron Geometry}
+Varies with the number of electron domains.
+\subsection {Planar EGs}
+\includegraphics[scale=0.4]{planarElectronGeos}
+\subsection {3-D EGs}
+\includegraphics[scale=0.4]{3dElectronGeos}
+\section{Molecular Geometry}
+Varies with the number of bonding and non-bonding domains. \\
+\includegraphics[scale=0.4]{molgeo3} \\
+\includegraphics[scale=0.4]{molgeo4} \\
+\includegraphics[scale=0.4]{molgeo5} \\
+\includegraphics[scale=0.4]{molgeo6} \\
+
+Usually an electron pair means a negative dipole, but sometimes geometry will cancel it out. See below:
+
+\begin{tabular}{|c|c|c|}
+\hline
+EDs & Neutral & Polar \\ \hline
+3 & trigonal planar & bent \\ \hline
+4 & tetrahedral & trigonal planar, bent \\ \hline
+5 & trigonal bipyramidal, linear & seesaw, T-shaped \\ \hline
+6 & octahedral, square planar & square pyramidal\\ \hline
+\end{tabular}
+\section{Polarity}
+\begin{tabular}{|c|c|}
+\hline
+$\Delta$EN & Polarity \\ \hline
+[0, 0.5) & Non-polar covalent \\ \hline
+[0.5, 1.7) & Polar covalent \\ \hline
+1.7+ & Ionic \\ \hline
+\end{tabular}
+
+If the molecule turns out to be polar covalent, draw the appropriate charges $\delta\pm$ over the molecules, and the \emph{dipole moment} (arrow with $\delta+$ and $\delta-$ to indicate polarity direction) to the left of the molecule.
+\chapter{Hybridization}
+Valence bond theory says that bonds are formed by overlapping orbitals that contain shared electron pairs.
+
+\includegraphics[scale=0.4]{hf} \\
+See how the orbitals smush together into new shapes.
+
+But the orbitals all looked the same in the electron geometry stuff! In truth, orbitals combine into identical \emph{hybrid orbitals}.
+
+\includegraphics[scale=0.4]{mh4} \\
+
+\includegraphics[scale=0.4]{hybridizationTable} \\
+
+\section{Multiple bonds}
+For each extra bond in a multiple (double/triple) bond, the number of available p-orbitals decreases.
+
+So if there is a double bond, the p-orbitals only go up to 2.
+
+If there is a triple bond, the p-orbitals only go up to 1.
+
+For every overlap of hybridized orbitals (i.e. more than one bonding domain i.e. not hydrogen) a sigma $\sigma$ bond is created. 
+
+For every overlap of p-orbitals a pi $\pi$ bond is created. 
+
+\emph{In general, 1 bond is $\sigma$, and the rest are $\pi$.}
+
+Say we have \ce{H-C#C-H}. The electron configuration of C is $1s^2 2s^2 2p^2$. C has 2 bonding domains, so it has \emph{sp} hybridized orbitals. There is a sigma bond between H and C, and between C and C: a total of 2 $\sigma$ bonds. The bond between the carbons is a triple bond, so less the sigma bond, there are 2 $\pi$ bonds.
+
+Final word: the overlap of p-orbitals in multiple bonds makes the bonds much stronger.
+
+\section{Intermolecular Forces}
+\begin{description}
+\item[Intramolecular forces] hold a molecule together e.g. bonds. Determine chemical properties e.g. reactivity. Stronger than intermolecular forces.
+\item[Intermolecular forces] attract molecules to each other. Determine physical properties e.g. boiling point.
+\end{description}
+\section{Intermolecular Forces}
+\subsection{London Dispersion Forces}
+\begin{itemize}
+	\item Between \emph{all molecules}
+	\item Electrons randomly collect on one side of an atom, giving the atom a charge (\emph{instantaneous dipole}). Electrons in adjacent atoms are affected and also gain a charge (\emph{induced dipole}). 
+	\item Though weak, happens frequently due to high speed
+	\item \# of atoms, contact area, atomic radius $\uparrow$ LD $\uparrow$
+	\item compactness $\uparrow$ LD $\downarrow$
+	\item The smaller an atom, the closer the nucleus is to the valence electrons. A positive dipole, as it is attracted by a negative dipole, is also repelled by the nucleus.
+	\item "polarizability": ability of electrons to move about and cause a charge
+\end{itemize}	
+\subsection{Dipole-dipole}
+\begin{itemize}
+\item Between \emph{polar substances}
+\item Electrostatic attraction between oppositely charged sides of molecules
+\end{itemize}
+\subsection{Hydrogen bonding: a type of dipole-dipole}
+\begin{itemize} 
+\item \emph{Strongest}
+\item Occurs in molecules containing \ce{H-O}, \ce{H-F}, \ce{H-N}
+\end{itemize}
+Stackability is a pretty good way to assess the strength intermolecular forces. \\
+\begin{tabular}{|c|c|c|p{2cm}|}
+\hline
+Name & Structure & BP& Reasoning \\ \hline
+n-butanol & \chemfig{H-C(-[2]H)(-[6]H)-C(-[2]H)(-[6]H)-C(-[2]H)(-[6]H)-C(-[2]H)(-[6]H)-O(-[1]H)} & Highest & Good hydrogen bond location, large contact area \\ \hline
+tertbutanol & \chemfig{C(-[2]C(-[0]H)(-[2]H)(-[4]H))(-H-OH)(-[6]C(-[0]H)(-[6]H)(-[4]H))} & High & Better hydrogen bond location than the below \\ \hline
+2-butanol & \chemfig{H-C(-[2]H)(-[6]H)-C(-[2]H)(-[6]H)-C(-[2]H)(-[6]O-[6]H)-C(-[2]H)(-[6]H)} & Lower & Worse hydrogen bond location \\ \hline
+isobutanol & \chemfig{C(-[2]H)(-[4]H)(-[6]H)-C(-[2]C(-[0]H)(-[2]H)(-[4]H))(-[6]C(-[0]H)(-[4]H)(-[6]H))-OH} & Lowest & Contact area too little \\ \hline
+\end{tabular}
+
 \end{document}
